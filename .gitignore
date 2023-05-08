@@ -1,0 +1,51 @@
+# Ignore directories
+bin/
+obj/
+node_modules/
+dist/
+out/
+
+# Ignore files
+*.log
+*.bak
+*.zip
+*.exe
+*.dll
+*.pdb
+*.user
+*.vscode
+*.suo
+*.cache
+*.env
+*.env.*
+*.key
+*.pfx
+*.cer
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore NuGet packages
+*.nupkg
+/packages/*.lock
+/packages/repositories.config
+
+# Ignore npm logs
+*.npm-debug.log*
+npm-debug.log*
+
+# Ignore Angular generated files
+/dist
+/src/environments/environment.ts
+
+# Ignore VS Code settings
+.vscode/settings.json
+
+# Ignore .NET Core generated files
+/.vs/
+/appsettings.Development.json
+/appsettings.json
+/launchSettings.json
+/*.db
+/.tools/
