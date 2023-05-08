@@ -3,5 +3,4 @@ To use run
 dotnet run in VendingMachine.Api
 and ng serve in the VendingMachine.UI
 
-This product is very incomplete due to limited time and having not worked with the latest version of Angular. The older version (AngularJS) is severly deprecated
-and out of date. 
+This product is very incomplete due to limited time and having not worked with the latest version of Angular. The older version (AngularJS) that I heavily used is severly deprecated and out of date. 
