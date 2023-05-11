@@ -1,0 +1,27 @@
+<div class="container">
+    <h2 class="text-center">Transaction History</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Items</th>
+          <th>Amount Paid</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions">
+          <td>{{ transaction.id }}</td>
+          <td>
+            <ul>
+              <li *ngFor="let item of transaction.products">
+                {{ item.name }} ({{ item.price | currency }})
+              </li>
+            </ul>
+          </td>
+          <td>{{ transaction.amountPaid | currency }}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4" style="min-width: 600px;">
+            <div class="card">
+                <div class="card-header">Vending Machine Inventory</div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of inventory">
+                                <td>{{ item.name }}</td>
+                                <td>{{ item.price | currency }}</td>
+                                <td>{{ item.quantity }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="container">
+    <h2 class="text-center">Make a Purchase</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h4>Select Items</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of inventory">
+              <td>{{ item.name }}</td>
+              <td>{{ item.price | currency }}</td>
+              <td>
+
+              </td>
+              <td>
+                <button class="btn btn-primary" (click)="onAddItem(item)">Add</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-8">
+        <h4>Selected Items</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of selectedItems">
+              <td>{{ item.name }}</td>
+              <td>{{ item.price | currency }}</td>
+              <td>{{ item.quantity }}</td>
+              <td>
+                <button class="btn btn-danger" (click)="onRemoveItem(item)">Remove</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div *ngIf="selectedItems.length > 0" class="text-right">
+          <h5>Total: {{ total | currency }}</h5>
+          <button class="btn btn-success" (click)="onPurchase()">Purchase</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
